@@ -12,6 +12,8 @@ export const EmissionAlertBadge = () => (
     </Alert>
 );
 
+
+
 // gdzie ten alert sie wyswietla
 
  <div className="col-12 col-md-2">
@@ -19,6 +21,12 @@ export const EmissionAlertBadge = () => (
  </div>
 
 ResultViewContainer
+
+i18n/languages/pl.json
+
+
+
+
 // skad brac dane, sume emisji
 
 
