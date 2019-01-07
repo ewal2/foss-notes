@@ -24,7 +24,12 @@ ResultViewContainer
 
 i18n/languages/pl.json
 
-
+  "emissions": {
+        "yourAnnualEmissionsAre": "Twoje roczne zużycie paliw kopalnych to %{emissions} ton CO2",
+        "yourEmissionsAreTooHigh": "Twoje zużycie CO2 jest zbyt wysokie!"
+        //"yourEmissionsAreStandard": "Twoje zużycie CO2 jest przecietne!"
+        //"youEmissionsAreLow": "Twoje zużycie CO2 jest niskie, brawo!"
+    }
 
 
 // skad brac dane, sume emisji
