@@ -12,6 +12,10 @@ export const EmissionAlertBadge = () => (
 
 // gdzie ten alert sie wyswietla
 // skad brac dane, sume emisji
+
+
+
+import const EmissionResultTotalField: EmissionResultField = 'totalAnnualEmission';
 ----------------------------------------
 
 First version: 
