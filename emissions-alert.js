@@ -68,10 +68,10 @@ function LowEmissions(props) {
 
 function EmissionsLevel(props){
     export const EmissionAlertBadge = props.EmissionAlertBadge;
-    if(EmissionAlertBadge > 20){
+    if(totalAnnualEmission > 20){
         return < DangerEmissions />
     }
-    if(EmissionAlertBadge => 10 ){
+    if(totalAnnualEmission => 10 ){
         return < StandardEmissions />
     } else{
         return < LowEmissions />
