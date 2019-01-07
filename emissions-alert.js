@@ -10,7 +10,8 @@ export const EmissionAlertBadge = () => (
     </Alert>
 );
 
-
+// gdzie ten alert sie wyswietla
+// skad brac dane, sume emisji
 ----------------------------------------
 
 First version: 
