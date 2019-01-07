@@ -27,8 +27,8 @@ i18n/languages/pl.json
   "emissions": {
         "yourAnnualEmissionsAre": "Twoje roczne zużycie paliw kopalnych to %{emissions} ton CO2",
         "yourEmissionsAreTooHigh": "Twoje zużycie CO2 jest zbyt wysokie!"
-        //"yourEmissionsAreStandard": "Twoje zużycie CO2 jest przecietne!"
-        //"youEmissionsAreLow": "Twoje zużycie CO2 jest niskie, brawo!"
+        "yourEmissionsAreStandard": "Twoje zużycie CO2 jest przecietne!"
+        "youEmissionsAreLow": "Twoje zużycie CO2 jest niskie, brawo!"
     }
 
 
@@ -55,7 +55,7 @@ function DangerEmissions(props) {
 function StandardEmissions(props) {
    return 
    <Alert color="warning">
-        <Translate value="emissions.yourEmissionsAreAverage" />
+        <Translate value="emissions.yourEmissionsAreStandard" />
     </Alert>  
 }
 
