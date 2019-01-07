@@ -3,6 +3,8 @@ Beginning:
 import React from 'react';
 import { Translate } from 'react-i18nify';
 import { Alert } from 'reactstrap';
+//import { EmissionResultField } from "./emission-result.interface";
+//import { EmissionResultField } from "./emission-result-fields.type";
 
 export const EmissionAlertBadge = () => (
     <Alert color="warning">
