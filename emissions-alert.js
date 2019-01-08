@@ -22,41 +22,52 @@ import const EmissionResultTotalField: EmissionResultField = 'totalAnnualEmissio
 ----------------------------------------
 
 First version: 
+const Danger = (props) => {
+   return(
+       <div className = "Danger">
+           <Alert color="danger">
+                <Translate value="emissions.yourEmissionsAreTooHigh" />
+           </Alert> 
+       </div>
+       ); 
+};
 
-import React from 'react';
-import { Translate } from 'react-i18nify';
-import { Alert } from 'reactstrap';
+const Warning = (props) => {
+   return(
+       <div className = "Warning">
+           <Alert color="warning">
+                <Translate value="emissions.yourEmissionsAreStandard" />
+           </Alert> 
+       </div>
+       ); 
+};
 
-function DangerEmissions(props) {
-   return 
-    <Alert color="danger">
-       <Translate value="emissions.yourEmissionsAreTooHigh" />
-    </Alert>  
-}
+const Low = (props) => {
+   return(
+       <div className = "Low">
+           <Alert color="success">
+                <Translate value="emissions.yourEmissionsAreLow" />
+           </Alert> 
+       </div>
+       ); 
+};
 
-function StandardEmissions(props) {
-   return 
-   <Alert color="warning">
-        <Translate value="emissions.yourEmissionsAreStandard" />
-    </Alert>  
-}
 
-function LowEmissions(props) {
-   return 
-   <Alert color="success">
-        <Translate value="emissions.yourEmissionsAreLow" />
-    </Alert> 
-}
-
-function EmissionsLevel(props){
-    export const EmissionAlertBadge = props.EmissionAlertBadge;
-    if(totalAnnualEmission > 20){
-        return < DangerEmissions />
-    }
-    if(totalAnnualEmission => 10 ){
-        return < StandardEmissions />
-    } else{
-        return < LowEmissions />
-    }
-}
+const totalAnnualEmission = () => (
+    <Alert color="warning">
+        <Translate value="emissions.yourEmissionsAreTooHigh" />
+    </Alert>
 );
+
+export const EmissionAlertBadge = (props) => (
+        
+        (totalAnnualEmission > 20){
+            return < Danger />
+        } if (totalAnnualEmission => 10) {
+            < Warning />
+        } else{
+            < Low />
+        }
+        
+        
+)
