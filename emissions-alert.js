@@ -14,7 +14,7 @@ export const EmissionAlertBadge = () => (
 
 
 //napisz tylko ze jesli powyz. 20 to wyswietlaj alert
-
+// jak wyciagnac z tego sam wynik
         <EmissionChartContainer />
 // skad brac dane, sume emisji i jak polaczyc je z alertem wyswietlania
 
