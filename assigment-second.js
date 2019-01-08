@@ -4,7 +4,7 @@ import { Alert } from 'reactstrap';
 //import { EmissionResultField } from "./emission-result.interface";
 //import { EmissionResultField } from "./emission-result-fields.type";
 //import { PartialResultCalculatorMap } from "./total-emission-results";
-import { totalAnnualEmission }  from './partial-emission-results';
+import { totalAnnualEmission }  from '../../emission-calculator';
 
 const danger = () => {
    return(
@@ -39,25 +39,18 @@ const low = () => {
 
 export const EmissionAlertBadge = () => (
     
-if(totalAnnualEmission > 20){
-    return danger;
-} if (totalAnnualEmission => 10){
-    return warning;
-} else{
-    return low
-}
- 
+(totalAnnualEmission > 20) ? "Danger" : "Warning" 
+
 );
 
+/home/ubuntu/workspace/Fossilminator/src/core/containers/ResultViewContainer.tsx
+Type error: JSX element type '"Danger" | "Warning"' is not a constructor function for JSX elements.
+  Type '"Danger"' is not assignable to type 'Element'.  TS2605
 
-"Failed to compile
-./src/shared/components/EmissionAlertBadge.tsx
-SyntaxError: /home/ubuntu/workspace/Fossilminator/src/shared/components/EmissionAlertBadge.tsx: Unexpected token (42:0)
-
-  40 | export const EmissionAlertBadge = () => (
-  41 |     
-> 42 | if(totalAnnualEmission > 20){
-     | ^
-  43 |     return danger;
-  44 | } if (totalAnnualEmission => 10){
-  45 |     return warning;"
+    14 |           <div className="row d-flex justify-content-center">
+    15 |                 <div className="col-12 col-sm-4">
+  > 16 |                     <EmissionAlertBadge />
+       |                     ^
+    17 |                 </div>
+    18 |             <div className="row">
+    19 |                 <div className="col-12 col-md-6">
