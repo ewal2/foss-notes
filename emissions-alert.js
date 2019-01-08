@@ -13,6 +13,8 @@ export const EmissionAlertBadge = () => (
 );
 
 
+//napisz tylko ze jesli powyz. 20 to wyswietlaj alert
+
 
 // skad brac dane, sume emisji i jak polaczyc je z alertem wyswietlania
 
