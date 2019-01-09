@@ -37,3 +37,17 @@ export const EmissionAlertBadge = () => (
     </Alert> 
  </div>
 );
+
+---------------------
+        
+export const EmissionAlertBadge = () => {
+
+    return (
+        <div className="EmissionAlertBadge">
+            <Alert color="danger">
+                <Translate value="emissions.yourEmissionsAreTooHigh" />
+            </Alert>
+        </div>
+    );
+};
+
