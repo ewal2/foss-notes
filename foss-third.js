@@ -12,6 +12,9 @@ import { Alert } from 'reactstrap';
 ------------------------------------------------
 //napisz tylko ze jesli powyz. 20 to wyswietlaj alert
 // jak wyciagnac z tego sam wynik
+Type error: 'EmissionResult' only refers to a type, but is being used as a value here.  TS2693
+
+
         <EmissionChartContainer />
 // skad brac dane, sume emisji i jak polaczyc je z alertem wyswietlania
 
