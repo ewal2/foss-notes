@@ -1,53 +1,27 @@
 import React from 'react';
 import { Translate } from 'react-i18nify';
 import { Alert } from 'reactstrap';
-//import { EmissionResultField } from "./emission-result.interface";
-//import { EmissionResultField } from "./emission-result-fields.type";
-//import { PartialResultCalculatorMap } from "./total-emission-results";
-//import { calculateEmissionResultsWithPartials }  from '../../emission-calculator';
-//import { emissionResult } from "../../emission-chart";
 
-//<EmissionChartContainer />
-
-------------------------------------------------
-//napisz tylko ze jesli powyz. 20 to wyswietlaj alert
-// jak wyciagnac z tego sam wynik
-Type error: 'EmissionResult' only refers to a type, but is being used as a value here.  TS2693
-
-
-        <EmissionChartContainer />
-// skad brac dane, sume emisji i jak polaczyc je z alertem wyswietlania
-
-
-
-import const EmissionResultTotalField: EmissionResultField = 'totalAnnualEmission';
-------------------------------------------------
-
-
-export const EmissionAlertBadge = () => (
- <div>
-    <Alert color="danger">
-        <Translate value="emissions.yourEmissionsAreTooHigh" />
-    </Alert>
-    <Alert color="warning">
-        <Translate value="emissions.yourEmissionsAreStandard" />
-    </Alert>
-    <Alert color="success">
-                <Translate value="emissions.yourEmissionsAreLow" />
-    </Alert> 
- </div>
-);
-
----------------------
-        
-export const EmissionAlertBadge = () => {
-
-    return (
-        <div className="EmissionAlertBadge">
-            <Alert color="danger">
+export const EmissionAlertBadge = ({ emission }: any) => {
+    if(emission > 20){
+        return(
+             <Alert color="danger">
                 <Translate value="emissions.yourEmissionsAreTooHigh" />
+             </Alert>
+        )
+    }
+    else if(emission >= 10 && emission <= 20){
+        return(
+            <Alert color="warning">
+                <Translate value="emissions.yourEmissionsAreStandard" />
             </Alert>
-        </div>
-    );
+        )
+    }
+    else{
+        return(
+            <Alert color="success">
+                <Translate value="emissions.yourEmissionsAreLow" />
+            </Alert> 
+        )
+    }
 };
-
